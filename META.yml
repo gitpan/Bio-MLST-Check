@@ -1,0 +1,42 @@
+---
+abstract: 'Multilocus sequence type checking using blast'
+author:
+  - 'Andrew J. Page <ap13@sanger.ac.uk>'
+build_requires:
+  Env::Path: 0
+  Test::Most: 0
+  strict: 0
+  warnings: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+license: gpl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Bio-MLST-Check
+requires:
+  Bio::AlignIO: 0
+  Bio::Perl: 0
+  Bio::PrimarySeq: 0
+  Bio::SeqIO: 0
+  Bio::SimpleAlign: 0
+  Cwd: 0
+  File::Basename: 0
+  File::Copy: 0
+  File::Path: 2.06
+  File::Temp: 0
+  File::Which: 0
+  Getopt::Long: 0
+  LWP::Simple: 0
+  Moose: 0
+  Moose::Role: 0
+  Moose::Util::TypeConstraints: 0
+  Parallel::ForkManager: 0
+  Text::CSV: 0
+  XML::LibXML: 0
+resources:
+  homepage: http://www.sanger.ac.uk/
+  repository: https://github.com/sanger-pathogens/mlst_check.git
+version: 1.123530
