@@ -26,7 +26,7 @@ Bio::MLST::Validate::File - Check to see if a file exists. For validation when c
 
 =head1 VERSION
 
-version 1.123530
+version 1.123540
 
 =head1 SYNOPSIS
 

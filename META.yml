@@ -39,4 +39,4 @@ requires:
 resources:
   homepage: http://www.sanger.ac.uk/
   repository: https://github.com/sanger-pathogens/mlst_check.git
-version: 1.123530
+version: 1.123540

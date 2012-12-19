@@ -90,7 +90,7 @@ Bio::MLST::ProcessFasta - Take in a fasta file, lookup the MLST database and cre
 
 =head1 VERSION
 
-version 1.123530
+version 1.123540
 
 =head1 SYNOPSIS
 

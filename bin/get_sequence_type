@@ -155,7 +155,7 @@ get_sequence_type - Given an assembly find the MLST sequence type.
 
 =head1 VERSION
 
-version 1.123530
+version 1.123540
 
 =head1 SYNOPSIS
 

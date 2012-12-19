@@ -66,7 +66,7 @@ Bio::MLST::NormaliseFasta - Take in a Fasta file, check for invalid characters a
 
 =head1 VERSION
 
-version 1.123530
+version 1.123540
 
 =head1 SYNOPSIS
 

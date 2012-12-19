@@ -86,7 +86,7 @@ Bio::MLST::SearchForFiles - Take in a species name and get the allele and profil
 
 =head1 VERSION
 
-version 1.123530
+version 1.123540
 
 =head1 SYNOPSIS
 

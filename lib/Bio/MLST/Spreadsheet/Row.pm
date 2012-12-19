@@ -136,7 +136,7 @@ Bio::MLST::Spreadsheet::Row - Create a row representation of the ST results for 
 
 =head1 VERSION
 
-version 1.123530
+version 1.123540
 
 =head1 SYNOPSIS
 

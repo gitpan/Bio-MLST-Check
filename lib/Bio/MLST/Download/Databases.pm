@@ -44,7 +44,7 @@ Bio::MLST::Download::Databases - Represents multiple databases of species
 
 =head1 VERSION
 
-version 1.123530
+version 1.123540
 
 =head1 SYNOPSIS
 

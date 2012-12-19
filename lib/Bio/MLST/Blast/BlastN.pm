@@ -91,7 +91,7 @@ Bio::MLST::Blast::BlastN - Wrapper around NCBI BlastN
 
 =head1 VERSION
 
-version 1.123530
+version 1.123540
 
 =head1 SYNOPSIS
 
