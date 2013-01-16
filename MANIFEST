@@ -5,11 +5,14 @@ META.yml
 Makefile.PL
 README
 README.md
+bin/download_fasta_database
 bin/download_mlst_databases
+bin/get_emm_sequence_type
 bin/get_sequence_type
 dist.ini
 lib/Bio/MLST/Blast/BlastN.pm
 lib/Bio/MLST/Blast/Database.pm
+lib/Bio/MLST/CDC/Convert.pm
 lib/Bio/MLST/Check.pm
 lib/Bio/MLST/CheckMultipleSpecies.pm
 lib/Bio/MLST/CompareAlleles.pm
@@ -28,8 +31,10 @@ lib/Bio/MLST/Spreadsheet/Row.pm
 lib/Bio/MLST/Types.pm
 lib/Bio/MLST/Validate/Executable.pm
 lib/Bio/MLST/Validate/File.pm
+lib/Bio/MLST/Validate/Resource.pm
 t/Blast/BlastN.t
 t/Blast/Database.t
+t/CDC/Convert.t
 t/Download/Database.t
 t/Download/Databases.t
 t/Input/NormaliseFasta.t
@@ -43,6 +48,7 @@ t/SequenceTypes/CompareAlleles.t
 t/SequenceTypes/SearchForFiles.t
 t/SequenceTypes/SequenceType.t
 t/Settings/DatabaseSettings.t
+t/data/CDC_emmST_partial.tfa
 t/data/Escherichia_coli_1/alleles/adk.tfa
 t/data/Escherichia_coli_1/alleles/purA.tfa
 t/data/Escherichia_coli_1/alleles/recA.tfa
@@ -51,6 +57,10 @@ t/data/Helicobacter_pylori/alleles/atpA.tfa
 t/data/Helicobacter_pylori/alleles/efp.tfa
 t/data/Helicobacter_pylori/alleles/mutY.tfa
 t/data/Helicobacter_pylori/profiles/hpylori.txt
+t/data/Streptococcus_pyogenes/profiles/spyogenes.txt
+t/data/Streptococcus_pyogenes_emmST/alleles/emmST.tfa
+t/data/Streptococcus_pyogenes_emmST/profiles/Streptococcus_pyogenes_emmST.txt
+t/data/Streptococcus_pyogenes_emmST_contigs.fa
 t/data/abc.fas
 t/data/adk.tfa
 t/data/adk_99_percent.tfa
@@ -69,6 +79,9 @@ t/data/contigs_pipe_character_in_seq_name.fa
 t/data/ddd.fas
 t/data/eee.fas
 t/data/efg.fas
+t/data/expected_Streptococcus_pyogenes_emmST.allele.csv
+t/data/expected_Streptococcus_pyogenes_emmST.genomic.csv
+t/data/expected_Streptococcus_pyogenes_emmST_alleles.fa
 t/data/expected_concatenated_alleles.fa
 t/data/expected_mlst_results.allele.csv
 t/data/expected_mlst_results.genomic.csv

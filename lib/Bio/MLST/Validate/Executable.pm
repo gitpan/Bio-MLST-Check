@@ -32,7 +32,7 @@ Bio::MLST::Validate::Executable - Validates the executable is available in the p
 
 =head1 VERSION
 
-version 1.123540
+version 1.130160
 
 =head1 SYNOPSIS
 

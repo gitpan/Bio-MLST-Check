@@ -169,7 +169,7 @@ Bio::MLST::Check - Multilocus sequence type checking using blast
 
 =head1 VERSION
 
-version 1.123540
+version 1.130160
 
 =head1 SYNOPSIS
 

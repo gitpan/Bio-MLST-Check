@@ -22,7 +22,9 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Bio-MLST-Check",
   "EXE_FILES" => [
+    "bin/download_fasta_database",
     "bin/download_mlst_databases",
+    "bin/get_emm_sequence_type",
     "bin/get_sequence_type"
   ],
   "LICENSE" => "gpl",
@@ -45,12 +47,13 @@ my %WriteMakefileArgs = (
     "Moose::Role" => 0,
     "Moose::Util::TypeConstraints" => 0,
     "Parallel::ForkManager" => 0,
+    "Regexp::Common" => 0,
     "Text::CSV" => 0,
     "XML::LibXML" => 0
   },
-  "VERSION" => "1.123540",
+  "VERSION" => "1.130160",
   "test" => {
-    "TESTS" => "t/*.t t/Blast/*.t t/Download/*.t t/Input/*.t t/Output/*.t t/Overall/*.t t/SequenceTypes/*.t t/Settings/*.t"
+    "TESTS" => "t/*.t t/Blast/*.t t/CDC/*.t t/Download/*.t t/Input/*.t t/Output/*.t t/Overall/*.t t/SequenceTypes/*.t t/Settings/*.t"
   }
 );
 

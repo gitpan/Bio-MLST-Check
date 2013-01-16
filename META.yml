@@ -34,9 +34,10 @@ requires:
   Moose::Role: 0
   Moose::Util::TypeConstraints: 0
   Parallel::ForkManager: 0
+  Regexp::Common: 0
   Text::CSV: 0
   XML::LibXML: 0
 resources:
   homepage: http://www.sanger.ac.uk/
   repository: https://github.com/sanger-pathogens/mlst_check.git
-version: 1.123540
+version: 1.130160

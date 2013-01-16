@@ -11,7 +11,7 @@ has 'sequence_names'        => ( is => 'ro', isa => 'ArrayRef',   required => 1 
 
 has 'allele_to_number'      => ( is => 'ro', isa => 'HashRef',    lazy => 1, builder => '_build_allele_to_number' ); 
 has '_profiles'             => ( is => 'ro', isa => 'ArrayRef',   lazy => 1, builder => '_build__profiles' );
-has 'sequence_type'         => ( is => 'ro', isa => 'Maybe[Int]', lazy => 1, builder => '_build_sequence_type' );
+has 'sequence_type'         => ( is => 'ro', isa => 'Maybe[Str]', lazy => 1, builder => '_build_sequence_type' );
 
 has 'nearest_sequence_type' => ( is => 'rw', isa => 'Maybe[Int]');
 
@@ -64,6 +64,7 @@ sub _build_sequence_type
   for(my $i=0; $i< @header_row; $i++)
   {
     next if($header_row[$i] eq "clonal_complex");
+    next if($header_row[$i] eq "mlst_clade");
     $header_row[$i] =~ s!_!!g;
     $header_row[$i] =~ s!-!!g;
   }
@@ -76,7 +77,7 @@ sub _build_sequence_type
     my @current_row = @{$self->_profiles->[$row]};
     for(my $col = 0; $col< @current_row; $col++)
     {
-      next if($header_row[$col] eq "ST" || $header_row[$col] eq "clonal_complex");
+      next if($header_row[$col] eq "ST" || $header_row[$col] eq "clonal_complex" || $header_row[$col] eq "mlst_clade");
       $num_loci++ if($row == 1);
 
       next if(!defined($self->allele_to_number->{$header_row[$col]}) );
@@ -122,7 +123,7 @@ Bio::MLST::SequenceType - Take in a list of matched alleles and look up the sequ
 
 =head1 VERSION
 
-version 1.123540
+version 1.130160
 
 =head1 SYNOPSIS
 

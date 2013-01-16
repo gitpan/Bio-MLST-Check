@@ -6,6 +6,7 @@ use Moose;
 use Moose::Util::TypeConstraints;
 use Bio::MLST::Validate::Executable;
 use Bio::MLST::Validate::File;
+use Bio::MLST::Validate::Resource;
 
 subtype 'Bio::MLST::Executable',
   as 'Str',
@@ -14,6 +15,10 @@ subtype 'Bio::MLST::Executable',
 subtype 'Bio::MLST::File',
   as 'Str',
   where { Bio::MLST::Validate::File->new()->does_file_exist($_) };
+
+subtype 'Bio::MLST::Resource',
+  as 'Str',
+  where { Bio::MLST::Validate::Resource->new()->does_resource_exist($_) };
 
 no Moose;
 no Moose::Util::TypeConstraints;
@@ -30,7 +35,7 @@ Bio::MLST::Types - Moose types to use for validation.
 
 =head1 VERSION
 
-version 1.123540
+version 1.130160
 
 =head1 SYNOPSIS
 

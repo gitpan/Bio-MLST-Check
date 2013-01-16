@@ -8,13 +8,14 @@ BEGIN { unshift( @INC, '../lib' ) }
 use lib "/software/pathogen/internal/prod/lib";
 use Moose;
 use Getopt::Long;
-use Bio::MLST::DatabaseSettings;
-use Bio::MLST::Download::Databases;
+use Bio::MLST::CDC::Convert;
 
-my ($config_file, $base_directory, $help);
+my ($config_file, $base_directory,$url, $species,$gene_name, $help);
 
-GetOptions ('c|config=s'         => \$config_file,
+GetOptions ('u|url=s'            => \$url,
             'b|base_directory=s' => \$base_directory,
+            's|species=s',       => \$species,
+            'g|gene_name=s',     => \$gene_name,
             'h|help'             => \$help,
 );
 
@@ -25,8 +26,8 @@ Downloads all the MLST databases to disk
 # download everything with defaults
 download_mlst_databases
 
-# XML file containing details of the MLST databases (from pubmlst)
-download_mlst_databases -c my_config_file.json
+# Pass in a different url to download
+download_mlst_databases -u http://example.com/myfasta.fa
 
 # destination base directory defaults to the environment variable \$MLST_DATABASES
 download_mlst_databases -b /path/to/destination
@@ -36,15 +37,17 @@ USAGE
 
 $base_directory ||= $ENV{MLST_DATABASES};
 $base_directory ||= '/lustre/scratch108/pathogen/pathpipe/mlst';
+$url  ||= 'ftp://ftp.cdc.gov/pub/infectious_diseases/biotech/tsemm/tofasta.tfa';
+$species     ||= 'Streptococcus pyogenes emm';
+$gene_name   ||= 'emm';
 
-$config_file    ||= 'http://pubmlst.org/data/dbases.xml';
-
-my $database_settings = Bio::MLST::DatabaseSettings->new(filename => $config_file)->settings;
-my $databases = Bio::MLST::Download::Databases->new(
-  databases_attributes => $database_settings,
-  base_directory  => $base_directory
-);
-$databases->update();
+my $convert_fasta = Bio::MLST::CDC::Convert->new(
+  species        => $species,
+  input_file     => $url,
+  gene_name      => $gene_name,
+  base_directory => $base_directory
+  );
+$convert_fasta->create_mlst_files();
 
 __END__
 

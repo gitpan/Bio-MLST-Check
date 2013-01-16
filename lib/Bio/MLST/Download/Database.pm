@@ -2,7 +2,7 @@ package Bio::MLST::Download::Database;
 # ABSTRACT: Represents a single genus-species database on a single species
 
 
-use File::Path 2.06 qw(make_path);
+
 use Moose;
 
 with 'Bio::MLST::Download::Downloadable';
@@ -13,24 +13,7 @@ has 'species'              => ( is => 'ro', isa => 'Str',     required => 1 );
 
 has 'destination_directory' => ( is => 'ro', isa => 'Str',     lazy => 1, builder => '_build_destination_directory' );
 
-sub _build_destination_directory
-{
-  my ($self) = @_;
-  my $destination_directory = join('/',($self->base_directory,$self->_sub_directory));
-  make_path($destination_directory);
-  make_path(join('/',($destination_directory,'alleles')));
-  make_path(join('/',($destination_directory,'profiles')));
-  return $destination_directory;
-}
 
-sub _sub_directory
-{
-  my ($self) = @_;
-  my $combined_name = join('_',($self->species));
-  $combined_name =~ s!\.$!!gi;
-  $combined_name =~ s!\W!_!gi;
-  return $combined_name;
-}
 sub update
 {
   my ($self) = @_;
@@ -59,7 +42,7 @@ Bio::MLST::Download::Database - Represents a single genus-species database on a 
 
 =head1 VERSION
 
-version 1.123540
+version 1.130160
 
 =head1 SYNOPSIS
 

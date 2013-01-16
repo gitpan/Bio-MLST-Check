@@ -57,7 +57,7 @@ Bio::MLST::DatabaseSettings - Read in an XML file of settings and return a hash 
 
 =head1 VERSION
 
-version 1.123540
+version 1.130160
 
 =head1 SYNOPSIS
 

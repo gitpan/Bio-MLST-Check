@@ -245,7 +245,7 @@ Bio::MLST::CheckMultipleSpecies - High throughput multilocus sequence typing (ML
 
 =head1 VERSION
 
-version 1.123540
+version 1.130160
 
 =head1 SYNOPSIS
 

@@ -223,7 +223,7 @@ Bio::MLST::CompareAlleles - Get a list of matching alleles between the sequence 
 
 =head1 VERSION
 
-version 1.123540
+version 1.130160
 
 =head1 SYNOPSIS
 
