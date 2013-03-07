@@ -48,7 +48,7 @@ Bio::MLST::Databases - List available MLST databases
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 

@@ -42,7 +42,7 @@ Bio::MLST::Download::Database - Represents a single genus-species database on a 
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 

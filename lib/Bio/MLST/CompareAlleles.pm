@@ -24,6 +24,7 @@ has '_blast_db_location'     => ( is => 'ro', isa => 'Str',                   la
 has 'matching_sequences'     => ( is => 'ro', isa => 'HashRef', lazy => 1, builder => '_build_matching_sequences' );
 has 'non_matching_sequences' => ( is => 'rw', isa => 'HashRef', default => sub {{}});
 has 'contamination'          => ( is => 'rw', isa => 'Bool',    default => 0);
+has 'contamination_sequence_names' => ( is => 'rw', isa => 'Maybe[ArrayRef]' );
 has 'new_st'                 => ( is => 'rw', isa => 'Bool',    default => 0);
 has '_absent_loci'           => ( is => 'ro', isa => 'HashRef', lazy => 1, builder => '_build__absent_loci' );
 
@@ -111,6 +112,7 @@ sub _build_matching_sequences
     if(defined($top_blast_hit{contamination}))
     {
       $self->contamination(1);
+      $self->contamination_sequence_names($top_blast_hit{contamination});
     }
     
     $top_blast_hit{allele_name} =~ s![-_]+!-!g;
@@ -223,7 +225,7 @@ Bio::MLST::CompareAlleles - Get a list of matching alleles between the sequence 
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 

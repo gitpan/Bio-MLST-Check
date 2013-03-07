@@ -68,7 +68,7 @@ Bio::MLST::Download::Downloadable - Moose Role to download everything data
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 

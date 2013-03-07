@@ -18,6 +18,7 @@ has 'makeblastdb_exec'    => ( is => 'ro', isa => 'Str',      required => 1 );
 has 'blastn_exec'         => ( is => 'ro', isa => 'Str',      required => 1 ); 
 has 'output_directory'    => ( is => 'ro', isa => 'Str',      required => 1 ); 
 has 'output_fasta_files'  => ( is => 'ro', isa => 'Bool',  default  => 0 ); 
+has 'show_contamination_instead_of_alt_matches' => ( is => 'ro', isa => 'Bool',   default => 1 ); 
 
 has '_search_results'     => ( is => 'ro', isa => 'Bio::MLST::SearchForFiles',  lazy => 1, builder => '_build__search_results' ); 
 has '_compare_alleles'    => ( is => 'ro', isa => 'Bio::MLST::CompareAlleles',  lazy => 1, builder => '_build__compare_alleles' ); 
@@ -72,7 +73,8 @@ sub _build__spreadsheet_row_obj
   my($self) = @_;
   Bio::MLST::Spreadsheet::Row->new(
     sequence_type_obj => $self->_sequence_type_obj, 
-    compare_alleles   => $self->_compare_alleles
+    compare_alleles   => $self->_compare_alleles,
+    show_contamination_instead_of_alt_matches => $self->show_contamination_instead_of_alt_matches
   );
 }
 
@@ -90,7 +92,7 @@ Bio::MLST::ProcessFasta - Take in a fasta file, lookup the MLST database and cre
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 

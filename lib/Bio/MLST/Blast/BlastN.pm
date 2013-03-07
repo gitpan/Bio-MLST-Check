@@ -70,7 +70,7 @@ sub _build_top_hit
   
   if((keys %contamination_check) >= 2)
   {
-    my @found_alleles = values(%contamination_check);
+    my @found_alleles = keys(%contamination_check);
     $top_hit{contamination} = \@found_alleles;
   }
   
@@ -91,7 +91,7 @@ Bio::MLST::Blast::BlastN - Wrapper around NCBI BlastN
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 

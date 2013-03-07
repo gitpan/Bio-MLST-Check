@@ -91,7 +91,7 @@ Bio::MLST::OutputFasta - Take in two hashes, both containing sequence names and 
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 

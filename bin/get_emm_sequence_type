@@ -84,7 +84,8 @@ my $multiple_fastas = Bio::MLST::Check->new(
   output_fasta_files    => $output_fasta_files,
   spreadsheet_basename  => $spreadsheet_basename,
   parallel_processes    => $parallel_processes,
-  output_phylip_files   => $output_phylip_files
+  output_phylip_files   => $output_phylip_files,
+  show_contamination_instead_of_alt_matches => 0
 );
 $multiple_fastas->create_result_files;
 
@@ -98,7 +99,7 @@ get_emm_sequence_type - Given an assembly find the MLST sequence type of the emm
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 

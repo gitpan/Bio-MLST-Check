@@ -123,7 +123,7 @@ Bio::MLST::SequenceType - Take in a list of matched alleles and look up the sequ
 
 =head1 VERSION
 
-version 1.130160
+version 1.130660
 
 =head1 SYNOPSIS
 
