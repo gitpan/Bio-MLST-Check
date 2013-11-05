@@ -37,7 +37,7 @@ sub create_files
   my($self) = @_;
   make_path($self->output_directory);
   $self->_fasta_filename;
-  if(defined($self->matching_sequences) && %{$self->matching_sequences})
+  if((defined($self->matching_sequences) && %{$self->matching_sequences}) ||(defined($self->non_matching_sequences) && %{$self->non_matching_sequences}) )
   {
 
     my %matching_sequences = %{$self->matching_sequences};
@@ -91,7 +91,7 @@ Bio::MLST::OutputFasta - Take in two hashes, both containing sequence names and 
 
 =head1 VERSION
 
-version 1.130660
+version 1.133090
 
 =head1 SYNOPSIS
 

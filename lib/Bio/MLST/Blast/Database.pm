@@ -42,7 +42,7 @@ Bio::MLST::Blast::Database - Wrapper around NCBIs makeblastdb command
 
 =head1 VERSION
 
-version 1.130660
+version 1.133090
 
 =head1 SYNOPSIS
 

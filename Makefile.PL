@@ -12,7 +12,9 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Multilocus sequence type checking using blast",
   "AUTHOR" => "Andrew J. Page <ap13\@sanger.ac.uk>",
   "BUILD_REQUIRES" => {
+    "Data::Dumper" => 0,
     "Env::Path" => 0,
+    "File::Slurp" => 0,
     "Test::Most" => 0,
     "strict" => 0,
     "warnings" => 0
@@ -51,7 +53,7 @@ my %WriteMakefileArgs = (
     "Text::CSV" => 0,
     "XML::LibXML" => 0
   },
-  "VERSION" => "1.130660",
+  "VERSION" => "1.133090",
   "test" => {
     "TESTS" => "t/*.t t/Blast/*.t t/CDC/*.t t/Download/*.t t/Input/*.t t/Output/*.t t/Overall/*.t t/SequenceTypes/*.t t/Settings/*.t"
   }

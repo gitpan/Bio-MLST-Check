@@ -31,7 +31,7 @@ Bio::MLST::Validate::Resource - Check to see if a file exists or if a uri is val
 
 =head1 VERSION
 
-version 1.130660
+version 1.133090
 
 =head1 SYNOPSIS
 

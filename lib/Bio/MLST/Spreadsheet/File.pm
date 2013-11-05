@@ -58,7 +58,7 @@ Bio::MLST::Spreadsheet::File - Create a file representation of the ST results fo
 
 =head1 VERSION
 
-version 1.130660
+version 1.133090
 
 =head1 SYNOPSIS
 

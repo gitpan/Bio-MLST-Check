@@ -55,9 +55,6 @@ get_sequence_type -s "Clostridium difficile" -y  my_assembly.fa
 # Specify an output directory 
 get_sequence_type  -s "Clostridium difficile" -o /path/to/results my_assembly.fa
 
-# Instead of flagging multiple 100% matches as contamination, output the name of the alternative sequence
-get_sequence_type --show_alternatives -s "Clostridium difficile" my_assembly.fa
-
 # Match against multiple MLST databases
 get_sequence_type -s "Clostridium botulinum, Clostridium difficile" my_assembly.fa
 
@@ -77,8 +74,8 @@ $base_directory ||= $ENV{MLST_DATABASES};
 $base_directory ||= '/lustre/scratch108/pathogen/pathpipe/mlst';
 
 # Multiple versions of blast lying around, so use a particular one if possible
-$makeblastdb_exec ||= '/software/pubseq/bin/ncbi-blast-2.2.27+/bin/makeblastdb';
-$blastn_exec  ||= '/software/pubseq/bin/ncbi-blast-2.2.27+/bin/blastn';
+$makeblastdb_exec ||= '/software/pubseq/bin/ncbi-blast-2.2.28+/bin/makeblastdb';
+$blastn_exec  ||= '/software/pubseq/bin/ncbi-blast-2.2.28+/bin/blastn';
 $makeblastdb_exec = 'makeblastdb' unless(Bio::MLST::Validate::Executable->new()->does_executable_exist($makeblastdb_exec));
 $blastn_exec = 'blastn' unless(Bio::MLST::Validate::Executable->new()->does_executable_exist($blastn_exec));
 
@@ -163,7 +160,7 @@ get_sequence_type - Given an assembly find the MLST sequence type.
 
 =head1 VERSION
 
-version 1.130660
+version 1.133090
 
 =head1 SYNOPSIS
 

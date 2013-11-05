@@ -35,7 +35,7 @@ Bio::MLST::Types - Moose types to use for validation.
 
 =head1 VERSION
 
-version 1.130660
+version 1.133090
 
 =head1 SYNOPSIS
 

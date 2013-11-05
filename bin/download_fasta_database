@@ -59,7 +59,7 @@ download_mlst_databases - Downloads all the MLST databases to disk. It requires 
 
 =head1 VERSION
 
-version 1.130660
+version 1.133090
 
 =head1 SYNOPSIS
 

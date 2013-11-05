@@ -108,7 +108,7 @@ Bio::MLST::CDC::Convert - Take in a fasta file of emmST sequences and convert it
 
 =head1 VERSION
 
-version 1.130660
+version 1.133090
 
 =head1 SYNOPSIS
 
